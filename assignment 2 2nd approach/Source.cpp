@@ -45,8 +45,7 @@ int main()
 			}
 		} while (check);																				
 		cout << "This is the frequency table of numbers input from the text file" << endl;				
-		cout << "Class" << "     |   " << "Frequency" << endl;
-		cout << "__________|______________" << endl;
+		
 
 		while (abc >> tem) {
 			noNum++;
@@ -94,18 +93,13 @@ int main()
 		else {
 			middleNum = (noNum / 2);
 		}
-		for (a = 0; a < 11; a++) {
-			if (a == 0) {
-				cout << " <=0" << "      |       " << frequency[0] << endl;								//Print out the frequency table
-				cout << "----------|--------------" << endl;
-			}
-			else if (a == 10) {
-				cout << " >=10" << "     |       " << frequency[10] << endl;
-				cout << "----------|--------------" << endl;
-			}
-			else {
-				cout << "   " << a << "      |       " << frequency[a] << endl;
-				cout << "----------|--------------" << endl;
+		cout << "Class	   |   <=0   |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   >=10   |" << endl;
+		cout << "--------------------------------------------------------------------------------------------------------------------------" << endl;
+		cout << "Frequency |";
+		for (a = 0; a < 11; a++) {			
+			cout << "   " << frequency[a] << "    |";
+			if (a = 10){
+				cout << endl;
 			}
 			if (frequency[a] > previous) {																//compare the current frequency with the previous one, if large, replace the mode and put it into the previous
 				mode = a;
